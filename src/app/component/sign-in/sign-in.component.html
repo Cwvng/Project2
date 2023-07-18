@@ -1,0 +1,25 @@
+<!--<div class="modal-header">-->
+<!--  <h4 class="modal-title">Đăng Nhập</h4>-->
+<!--  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<app-navbar [bgColor]="bgColor"></app-navbar>
+
+<form class="signinForm" [formGroup]="signInForm" (ngSubmit)="signIn()">
+  <h1 class="formTitle">Đăng nhập</h1>
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+    <label for="floatingInput">Email</label>
+  </div>
+  <div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword" placeholder="password" formControlName="password">
+    <label for="floatingPassword">Password</label>
+  </div>
+  <button type="submit" class="btn btn-primary mt-3 loginBtn" (click)="signIn()">Đăng nhập</button>
+</form>
+
+
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--  <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Close</button>-->
+<!--</div>-->

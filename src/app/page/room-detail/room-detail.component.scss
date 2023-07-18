@@ -1,0 +1,67 @@
+.roomContainer{
+  margin: 5rem auto;
+  width: 75%;
+  .imgList{
+    display: flex;
+    gap:10px;
+    margin-bottom: 1rem;
+    div{
+      flex: 1;
+      .img{
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.02);
+        }
+      }
+
+    }
+  }
+  .roomInfoDiv{
+    display: flex;
+    gap:20px;
+    .roomInfo{
+      flex:3;
+      display: flex;
+      gap:10px;
+      flex-direction: column;
+      .roomDetail{
+        border: 1px solid black;
+        padding:10px;
+        border-radius: 10px;
+        gap:10px;
+
+      }
+    }
+    .roomPrice{
+      border-radius: 10px;
+      border:1px solid black;
+      padding:10px 0px;
+      flex:1;
+      position: sticky;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:10px;
+      .orderBtn{
+        all: unset;
+        border-radius: 10px;
+        border: 2px solid var(--PrimaryColor);
+        color: var(--PrimaryColor);
+        padding: 10px;
+        width: max-content;
+        &:hover{
+          background: var(--PrimaryColor);
+          color:white;
+          cursor: pointer;
+
+        }
+      }
+    }
+  }
+}

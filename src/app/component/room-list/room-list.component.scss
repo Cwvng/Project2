@@ -1,0 +1,50 @@
+.roomListContainer {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 5rem auto;
+
+  .roomListTitle {
+    margin-bottom: 5px;
+  }
+
+  .roomListList {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    height: 10rem;
+    .roomListItem {
+      position: relative;
+      width:25%;
+      .roomRating{
+        position:absolute;
+        top:10px;
+        right:10px;
+        color:white;
+        font-weight: bold;
+        background: var(--PrimaryColor);
+        padding:5px 15px;
+      }
+      .roomListImg {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .roomListTitle {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 1000;
+        color: white;
+        text-shadow: 0 2px 8px 2px rgba(178, 178, 178);
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

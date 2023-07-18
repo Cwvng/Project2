@@ -1,0 +1,46 @@
+.resultDiv{
+  margin:7rem auto;
+  width: 50%;
+
+  .resultItem{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: relative;
+    margin-top:20px;
+    height: 30vh;
+    box-shadow: 0 2px 8px 4px rgba(178,178,178, 0.5);
+    .resultImg{
+      width: 50%;
+      height: 100%;
+    }
+    .resultInfo{
+      margin-left: 20px;
+      .resType{
+        background:var(--PrimaryColor) ;
+        font-size:15px;
+        color: white;
+        border-radius: 20px;
+        padding: 5px 10px;
+        width: max-content;
+      }
+    }
+    .resultPrice{
+      position: absolute;
+      bottom:20px;
+      right: 20px;
+      color:coral;
+      font-weight: bolder;
+    }
+
+    .resultRating{
+      position: absolute;
+      top:5px;
+      left:-10px;
+      background: var(--PrimaryColor);
+      color: white;
+      padding: 10px 10px 10px 20px;
+    }
+
+  }
+}

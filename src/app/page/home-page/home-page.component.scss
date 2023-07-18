@@ -1,0 +1,17 @@
+.roomList{
+  position: relative;
+  .roomPagination{
+    position: absolute;
+    top: 0px;
+    right:13%;
+    .pagiationBtn{
+      all:unset;
+      background: var(--PrimaryColor);
+      padding:8px;
+      border-radius: 50%;
+      width: auto;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+}

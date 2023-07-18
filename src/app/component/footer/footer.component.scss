@@ -1,0 +1,13 @@
+.footerContainer{
+  display: flex;
+  background: var(--PrimaryColor);
+  padding: 20px ;
+  justify-content: space-between;
+
+  .infoLogo{
+    display: flex;
+    flex-display: row;
+    justify-content: space-around;
+    margin-top:10px;
+  }
+}

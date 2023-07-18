@@ -1,0 +1,38 @@
+.cityContainer{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin:5rem auto;
+  .cityTitle{
+    margin-bottom: 5px;
+  }
+  .cityList{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    .cityItem{
+      position: relative;
+      flex:1;
+      .cityImg{
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.02);
+        }
+
+      }
+      .cityTitle{
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        z-index: 1000;
+        color: white;
+        text-shadow: 0 2px 8px 2px rgb(178, 178, 178);
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<section [ngStyle]="{'background':bgColor? bgColor : 'transparent'}" class="navbarContainer">
+  <div routerLink="/" class="logoDiv">
+    <h3>
+      BOOKINGROOM
+    </h3>
+  </div>
+
+  <ul class="navbarOtp">
+    <li routerLink="/">Trang chủ</li>
+    <li>Bookmark</li>
+    <li *ngIf="!sharedService.isLogin">
+      <button class="navbarBtn" >
+        Đăng ký
+      </button>
+    </li>
+    <li *ngIf="!sharedService.isLogin">
+      <button class="navbarBtn" routerLink="/signin">
+        Đăng nhập
+      </button>
+    </li>
+    <li *ngIf="sharedService.isLogin">
+      {{sharedService.user.username}}
+    </li>
+    <li *ngIf="sharedService.isLogin">
+      <button class="navbarBtn" (click)="signOut()">
+        Đăng xuất
+      </button>
+    </li>
+
+  </ul>
+
+</section>

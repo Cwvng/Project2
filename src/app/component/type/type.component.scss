@@ -1,0 +1,39 @@
+.typeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 5rem auto;
+
+  .typeTitle {
+    margin-bottom: 5px;
+  }
+
+  .typeList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    .typeItem {
+      flex:1;
+      position: relative;
+
+      .typeImg {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .typeTitle {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 1000;
+        color: white;
+        text-shadow: 0 2px 8px 2px rgb(178, 178, 178);
+      }
+    }
+  }
+}

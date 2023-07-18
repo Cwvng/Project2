@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<app-search></app-search>
+<div class="roomContainer">
+  <div class="imgList">
+    <div><img class="img" src={{room.url}} alt="ảnh phòng cực mạnh"></div>
+    <div><img class="img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/378828506.jpg?k=ea7d10effc56e6e3ded34794423b9a97f43d25c303867e6051d422a08b023480&o=&hp=1" alt="ảnh phòng cực mạnh">
+    </div>
+    <div>
+    <img class="img" src="https://www.navadahotel.com/FileStorage/Room/Thumbnail/DSC_9377-HDR.jpg" alt="ảnh phòng cực mạnh">
+    </div>
+    </div>
+  <div class="roomInfoDiv">
+    <div class="roomInfo">
+      <div class="roomDetail">
+        <h2>{{room.hotel_name}}<span>{{room.rating_hotel}}</span>
+        </h2>
+        <h4>{{room.position_detail}}, {{room.city_name}}</h4>
+        <p>Thông tin phòng</p>
+        <p>{{room.room_detail}}</p>
+      </div>
+      <div class="roomDetail">
+        Tiện ích
+      </div>
+    </div>
+    <div class="roomPrice">
+      <h3>Giá phòng: <span style="color:red">{{room.price}}</span></h3>
+      <button class="orderBtn" (click)="placeOrder(room.room_id)">Đặt phòng ngay</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
