@@ -17,19 +17,17 @@ export class SignInComponent {
               private route: Router,
               public sharedService: SharedService) {}
   signInForm = new FormGroup({
-    email: new FormControl(''),
+    username: new FormControl(''),
     password: new FormControl(''),
   });
   signIn() {
-    console.warn(this.signInForm.value.password);
     this.usersService.signIn(this.signInForm.value).subscribe(
       res => {
         // @ts-ignore
         this.sharedService.setUser(res.user);
         // @ts-ignore
-        this.sharedService.user = res.user;
+        this.sharedService.user = res.details;
         this.route.navigateByUrl("");
-        alert("Đăng nhập thành công")
       },
       err => {
         alert("Đăng nhập không thành công")

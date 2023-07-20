@@ -9,7 +9,7 @@
     <li routerLink="/">Trang chủ</li>
     <li>Bookmark</li>
     <li *ngIf="!sharedService.isLogin">
-      <button class="navbarBtn" >
+      <button class="navbarBtn">
         Đăng ký
       </button>
     </li>
@@ -18,15 +18,18 @@
         Đăng nhập
       </button>
     </li>
-    <li *ngIf="sharedService.isLogin">
-      {{sharedService.user.username}}
+    <li *ngIf="sharedService.isLogin" >
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary navbarBtn" id="dropdownBasic1" ngbDropdownToggle>
+          {{sharedService.user.username}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="edit()">Chỉnh sửa</button>
+          <button ngbDropdownItem>Phòng đã đặt</button>
+          <button ngbDropdownItem (click)="signOut()">Đăng xuất</button>
+        </div>
+      </div>
     </li>
-    <li *ngIf="sharedService.isLogin">
-      <button class="navbarBtn" (click)="signOut()">
-        Đăng xuất
-      </button>
-    </li>
-
   </ul>
 
 </section>

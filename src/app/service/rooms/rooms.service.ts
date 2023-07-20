@@ -1,23 +1,31 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-
+import {Comment} from "../../model/comment/comment";
 @Injectable({
   providedIn: 'root'
 })
 export class RoomsService {
-  private URL = "http://localhost:8000/api/v1"
+  private URL = "http://localhost:8000/api/hotels"
   constructor(private http: HttpClient) { }
-  getAllRooms(page: any) {
-    return this.http.get(`${this.URL}/rooms?page=${page}`)
+  getAllHotels() {
+    return this.http.get(`${this.URL}/`)
   }
-  getSingleRoom(id:any) {
-    return this.http.get(`${this.URL}/room/${id}`);
+
+
+  viewHotelDetail(id:any) {
+    return this.http.get(`${this.URL}/find/${id}`);
   }
+
+
+
   getRoomByFilter(children:any, adults:any, city:any) {
     return this.http.get(`${this.URL}/find_hotel?city=${city}&adults=${adults}&children=${children}`);
   }
   placeOrder(body:any) {
     return this.http.post(`${this.URL}/register_room`, body);
 
+  }
+  getRoomComment(id:any) {
+    return this.http.get<Comment>(`${this.URL}/get_room_comment?room_id=${id}`);
   }
 }

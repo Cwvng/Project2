@@ -1,12 +1,12 @@
 <section class="roomListContainer">
   <h1 class="roomListTitle">
-    Danh sách phòng
+    Danh sách khách sạn
   </h1>
   <div class="roomListList" >
     <div class="roomListItem" *ngFor="let room of roomList">
-      <img (click)="viewRoomDetail(room.room_id)" class="roomListImg" src={{room.url}} alt="phòng vjppro">
-      <h2 class="roomListTitle">{{room.hotel_name}}</h2>
-      <h6 class="roomRating">{{room.rating_hotel}}</h6>
+      <img (click)="viewHotelInfo(room._id)" class="roomListImg" src={{room.photos[0]}} alt="phòng vjppro">
+      <h2 class="roomListTitle">{{room.name}}</h2>
+      <h6 class="roomRating">4</h6>
     </div>
     <div *ngIf="!roomList">
       Không có phòng nào

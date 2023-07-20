@@ -1,0 +1,22 @@
+<div class="infoDiv">
+  <div class="modal-header">
+    <h4 class="modal-title">{{hotel.name}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <!--  <div class="card" style="width: 18rem;">-->
+    <img class="card-img-top" src="{{hotel.photos[0]}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{hotel.city}}</h5>
+      <h6 class="card-type">{{hotel.type}}</h6>
+      <p class="card-text">{{hotel.title}}</p>
+      <!--      <a href="#" class="btn btn-primary">Go somewhere</a>-->
+    </div>
+  </div>
+  <!--</div>-->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Đóng</button>
+    <button type="button" class="btn btn-primary" >Xem phòng</button>
+  </div>
+
+</div>

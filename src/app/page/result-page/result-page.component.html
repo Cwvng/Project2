@@ -2,9 +2,9 @@
 <app-search></app-search>
 <div class="resultDiv">
   <div class="resultList">
-    <div class="resultItem" *ngFor="let room of result" >
+    <div class="resultItem" *ngFor="let room of roomList">
       <h5 class="resultRating">{{room.rating_hotel}}</h5>
-      <img class="resultImg" src={{room.room_img}}  alt="room img">
+      <img (click)="viewHotelDetail(room.room_id)" class="resultImg" src={{room.room_img}} alt="room img">
       <div class="resultInfo">
         <h2 class="resName">{{room.hotel_name}}</h2>
         <h3 class="resPos">{{room.city_name}}</h3>
@@ -13,7 +13,7 @@
       <h1 class="resultPrice">{{room.price}}</h1>
     </div>
   </div>
-
 </div>
+
 
 <app-footer></app-footer>

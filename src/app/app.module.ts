@@ -21,6 +21,8 @@ import { FilterComponent } from './component/filter/filter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignInComponent } from './component/sign-in/sign-in.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { EditComponent } from './component/edit/edit.component';
+import { HotelInfoComponent } from './component/hotel-info/hotel-info.component';
 
 
 // Register the Vietnamese locale.
@@ -39,6 +41,8 @@ registerLocaleData(localeVi);
     ResultPageComponent,
     FilterComponent,
     SignInComponent,
+    EditComponent,
+    HotelInfoComponent,
 
   ],
   imports: [

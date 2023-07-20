@@ -3,12 +3,15 @@
 <div class="roomContainer">
   <div class="imgList">
     <div><img class="img" src={{room.url}} alt="ảnh phòng cực mạnh"></div>
-    <div><img class="img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/378828506.jpg?k=ea7d10effc56e6e3ded34794423b9a97f43d25c303867e6051d422a08b023480&o=&hp=1" alt="ảnh phòng cực mạnh">
+    <div><img class="img"
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/378828506.jpg?k=ea7d10effc56e6e3ded34794423b9a97f43d25c303867e6051d422a08b023480&o=&hp=1"
+              alt="ảnh phòng cực mạnh">
     </div>
     <div>
-    <img class="img" src="https://www.navadahotel.com/FileStorage/Room/Thumbnail/DSC_9377-HDR.jpg" alt="ảnh phòng cực mạnh">
+      <img class="img" src="https://www.navadahotel.com/FileStorage/Room/Thumbnail/DSC_9377-HDR.jpg"
+           alt="ảnh phòng cực mạnh">
     </div>
-    </div>
+  </div>
   <div class="roomInfoDiv">
     <div class="roomInfo">
       <div class="roomDetail">
@@ -19,7 +22,21 @@
         <p>{{room.room_detail}}</p>
       </div>
       <div class="roomDetail">
-        Tiện ích
+        <h3>Viết đánh giá</h3>
+        <div class="cmtInput">
+          <img class="cmtAva" src="https://www.londondentalsmiles.co.uk/wp-content/uploads/2017/06/person-dummy.jpg"
+               alt="">
+        </div>
+        <h3 class="mt-3">Đánh giá của khách hàng</h3>
+        <div class="cmtItem" *ngFor="let cmt of comments">
+          <img class="cmtAva" src="https://www.londondentalsmiles.co.uk/wp-content/uploads/2017/06/person-dummy.jpg"
+               alt="">
+          <div class="cmt">
+            <h6>User:{{cmt.user_id}}</h6>
+            <p *ngIf="cmt.comment">{{cmt.comment}}</p>
+            <p *ngIf="!cmt.comment">"Không có bình luận"</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="roomPrice">

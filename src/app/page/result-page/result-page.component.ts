@@ -1,6 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {CityComponent} from "../../component/city/city.component";
 import {SharedService} from "../../service/shared/shared.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {RoomsService} from "../../service/rooms/rooms.service";
 
 @Component({
   selector: 'app-result-page',
@@ -9,10 +11,16 @@ import {SharedService} from "../../service/shared/shared.service";
 })
 export class ResultPageComponent implements OnInit{
   ngOnInit() {
-    this.result = this.sharedService.resultSeacrh;
+    let hotelId = this.route.snapshot.paramMap.get('id');
   }
-  constructor(private sharedService: SharedService) {
+  constructor(private sharedService: SharedService,
+              private router: Router,
+              private roomsService: RoomsService,
+              private route: ActivatedRoute) {
   }
-  result:any;
-  protected readonly JSON = JSON;
+  roomList:any;
+
+  viewHotelDetail(id:any) {
+    this.router.navigateByUrl(`/room/${id}`)
+  }
 }

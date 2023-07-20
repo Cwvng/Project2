@@ -4,12 +4,13 @@ import {HomePageComponent} from "./page/home-page/home-page.component";
 import {RoomDetailComponent} from "./page/room-detail/room-detail.component";
 import {ResultPageComponent} from "./page/result-page/result-page.component";
 import {SignInComponent} from "./component/sign-in/sign-in.component";
+import {HotelInfoComponent} from "./component/hotel-info/hotel-info.component";
 
 const routes: Routes = [
   {path:"" ,component:HomePageComponent},
-  {path:"room/:id", component:RoomDetailComponent},
+  {path:"availableRooms/:id", component:ResultPageComponent},
   {path:"result", component:ResultPageComponent},
-  {path:"signin", component:SignInComponent}
+  {path:"signin", component:SignInComponent},
 ];
 
 @NgModule({
